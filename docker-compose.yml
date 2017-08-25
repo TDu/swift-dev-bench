@@ -1,0 +1,15 @@
+version: '2'
+services:
+  # swift-data:
+  #   image: busybox
+  #   volumes:
+  #     - "data-srv:/data/srv"
+  swift-server:
+    image: morrisjobke/docker-swift-onlyone
+    volumes:
+        - "data-srv:/data/srv"
+    ports:
+      - "12345:8080"
+
+volumes:
+  data-srv:
